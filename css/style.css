@@ -1,0 +1,207 @@
+@charset "UTF-8";
+:root{
+    --main-color : rgba(0, 0, 0, 0.1);
+}
+html,body {height: 100%;}
+a {color: #666666;}
+ol,ul {list-style: none;}
+
+body{background-color: #FAFAFA;}
+
+main {
+    width: 100%;
+}
+
+article {
+    width: 935px;
+    min-height: 800px;
+    margin: 120px auto 0;
+    overflow: hidden;
+}
+
+.left-side {
+    width: 50%;
+    height: 635px;
+    background-color: tomato;
+    background: url(../img/login_main.png);
+    float: left;
+}
+.right-side{
+    width: 50%;
+    float: right;
+}
+
+.logo-login__area{
+    border: 1px solid var(--main-color);
+    background-color: #fff;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.logo-login__area .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+}
+
+.login-area{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-area label {
+    display: block;
+    position: relative;
+    height: 36px;
+    background-color: var(--main-color);   
+    margin-bottom: 5px;
+    z-index: 10;
+}
+
+.login-area label span {
+    display: block;
+    position: absolute;
+    left: 8px;
+    height: 36px;
+    line-height: 36px;
+    z-index: 1;
+
+}
+.login-pw .pw{
+    display: flex;
+}
+
+.login-pw .pw .funcText button{
+    box-sizing: border-box;
+    border: 0;
+    width: 100px;
+    background-color: var(--main-color); 
+    float: right;
+    height: 36px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.login-area label input {
+    width: 250px;
+    height: 36px;
+    box-sizing: border-box;
+    background-color: var(--main-color); 
+    border: 0;  
+    border-radius: 5px;
+}
+
+.login-pw .pw input {
+    width: 150px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.login-id .pw{
+    position: relative;
+}
+
+.login-button {
+    background-color: #0095F6;
+    width: 250px;
+    height: 36px;
+    border: 0;
+    border-radius: 5px;
+    margin: 20px 0;
+    color: #fff;
+}
+.division-text{
+    max-width: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.division-text div {
+    width: 33%;
+    height: 100%;
+}
+.division-text .line{
+    width: 115px;
+    height: 1px;
+    background-color: lightgrey;
+    vertical-align: middle;
+}
+.division-text .text {
+    text-align: center;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.5)
+}
+
+.btn-group a img{
+    width: 136px;
+    height: 40px;
+}
+.facebook {
+    margin-bottom: 20px;
+}
+.facebook .facebookicon{
+    background: url('../img/bunddle.png');
+    background-repeat: no-repeat;
+    background-position: -414px -259px;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    position: relative;
+    top: 3px;
+}
+
+.facebook .text {
+    color: #0095F6;
+    font-weight: bold;
+}
+
+.login-area a{
+    font-size: 11px;
+}
+
+.sign-in__area {
+    border: 1px solid var(--main-color);
+    max-width: 350px;
+    height: 70px;
+    background-color: #fff;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+}
+.sign-in__area span{
+    margin-right: 5px;
+}
+.sign-in__area a{
+    color: #0095F6;
+    font-weight: bold;
+}
+
+.download-button__area {
+    margin-top: 30px;
+    max-width: 350px;
+    text-align: center;
+}
+
+.download-button__area p {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.left-side .image{
+    margin: 0 0 0 42px;
+    position: relative;
+}
+
+.left-side .image img{ 
+    margin: 27px 0 0 113px;
+    position: relative;
+}
