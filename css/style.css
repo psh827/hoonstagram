@@ -72,41 +72,61 @@ article {
   background-color: var(--main-color);
   margin-bottom: 5px;
   z-index: 10;
+  border-radius: 5px;
 }
 
 .login-area label span {
-  display: block;
+  /* display: block; */
   position: absolute;
   left: 8px;
   height: 36px;
   line-height: 36px;
+  font-size: 10px;
   z-index: 1;
+  transition: 0.2s;
+}
+
+.login-area label span.inside {
+  transform: scale(.83333) translateY(-10px) translateX(-16px);
+}
+.login-area label.pw .inside{
+  left: 18px;
 }
 .login-pw .pw {
   display: flex;
 }
 
 .login-pw .pw .funcText button {
+  position: absolute;
   box-sizing: border-box;
+  right: 0;
   border: 0;
-  width: 100px;
-  background-color: var(--main-color);
-  float: right;
+
+  background-color:#FAFAFA;
   height: 36px;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
 }
-.login-pw .pw .funcText button.hide {
+
+.login-pw .pw .funcText button.hide{
   display: none;
 }
 .login-area label input {
   width: 250px;
   height: 36px;
   box-sizing: border-box;
-  background-color: var(--main-color);
+  background-color: #FAFAFA;
   border: 0;
-  border-radius: 5px;
+  padding-left: 8px;
+  outline: none;
 }
+
+.login-area label .input-box.on{
+  font-size: 12px;
+  padding: 14px 0 2px 8px!important;
+}
+
 
 .login-pw .pw input {
   width: 250px;
@@ -120,13 +140,28 @@ article {
 
 .login-button {
   background-color: #0095f6;
+  opacity: 0.7;
   width: 250px;
   height: 36px;
   border: 0;
+  font-weight: bold;
   border-radius: 5px;
   margin: 20px 0;
   color: #fff;
 }
+button.on {
+  background-color: #0095f6;
+  width: 250px;
+  height: 36px;
+  border: 0;
+  font-weight: bold;
+  border-radius: 5px;
+  margin: 20px 0;
+  color: #fff;
+  opacity: 1;
+  cursor: pointer;
+}
+
 .division-text {
   max-width: 350px;
   display: flex;
@@ -214,10 +249,11 @@ article {
 
 .left-side .image .inner-image {
   margin: 27px 0 0 113px;
-  position: relative;
-  display: none;
+  position: absolute;
+  opacity: 0;
+  transition: 1.5s;
 }
 
 .left-side .image .inner-image.show {
-  display: block;
+  opacity: 1;
 }
