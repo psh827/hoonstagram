@@ -1,15 +1,305 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
-    <title>Hoonstagram</title>
-    <link rel="stylesheet" href="./css/initial.min.css" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <!-- 파일 다운로드 로컬에서 작용 -->
-    <script src="./js/jquery.js"></script>
-    <script src="./js/common.js"></script>
-  </head>
-  <body">
-  </body>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>Hoonstagram</title>
+  <link rel="stylesheet" href="./css/initial.min.css" />
+  <link rel="stylesheet" href="./css/text_ellipsis.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <!-- 파일 다운로드 로컬에서 작용 -->
+  <script src="./js/jquery.js"></script>
+  <script src="./js/text_ellipsis.js"></script>
+  <script src="./js/main.js"></script>
+</head>
+
+<body>
+  <section>
+    <main>
+      <section>
+        <div class="left">
+          <div class="story">
+            <ul>
+              <li><a href="#"></a></li>
+              <li><a href="#"></a></li>
+              <li><a href="#"></a></li>
+              <li><a href="#"></a></li>
+              <li><a href="#"></a></li>
+              <li><a href="#"></a></li>
+              <li><a href="#"></a></li>
+              <li><a href="#"></a></li>
+              <li><a href="#"></a></li>
+              <li><a href="#"></a></li>
+            </ul>
+          </div>
+          <div class="article">
+              <article class="main-article">
+                <div class="head">
+                  <header>
+                    <div class="article-logo">
+                      <img src="./img/porfile.jpg" alt="" style="width: 32px; height: 32px;">
+                    </div>
+                    <div class="article-user">
+                      <a href="#">
+                        <span>Park</span>
+                      </a>
+                    </div>
+                  </header>
+                  <div class="more-info">
+                    <i class="fa-solid fa-ellipsis"></i>
+                  </div>
+                </div>
+                <div class="photo">
+                  <div class="main-photo">
+                    <ul>
+                      <li>
+                        <img src="./img/sushi.jpg" alt="">
+                      </li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                    </ul>
+                  </div>
+                  <div class="article-func">
+                    <div class="logo-area">
+                      <div class="heart">
+                        <i class="fa-regular fa-heart fa-xl"></i>
+                      </div>
+                      <div class="comment-logo">
+                        <i class="fa-regular fa-comment fa-xl"></i>
+                      </div>
+                      <div class="airplane">
+                        <i class="fa-solid fa-paper-plane fa-xl"></i>
+                      </div>
+                    </div>
+                    <div class="save-area">
+                      <div class="savelogo">
+                        <i class="fa-regular fa-bookmark fa-xl"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="comment">
+                  <div class="like">
+                    <span>좋아요 460개</span>
+                  </div>
+                  <div class="comment-main-text">
+                    <span>user</span>
+                    <span class="text more-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam nisi laudantium tempora, itaque vel repellendus optio nemo. Cupiditate dignissimos nulla voluptatibus eaque, velit neque. Sequi quam accusantium quos vero
+                      ullam.</span>
+                    <p> </p>
+                  </div>
+                </div>
+                  <div class="before-day">
+                    <span>2일전</span>
+                  </div>
+                <div class="reple-area">
+                  <div class="imoji">
+                    <i class="fa-regular fa-face-smile fa-xl"></i>
+                  </div>
+                  <textarea aria-label="댓글 달기..." data-testid="post-comment-text-area" placeholder="댓글 달기..." class="comment-input" autocomplete="off" autocorrect="off" style="height: 18px !important;"></textarea>
+                  <button class="push-btn" disabled type="submit">게시</button>
+                </div>
+            </article>
+            <article class="main-article">
+              <div class="head">
+                <header>
+                  <div class="article-logo">
+                    <img src="./img/porfile.jpg" alt="" style="width: 32px; height: 32px;">
+                  </div>
+                  <div class="article-user">
+                    <a href="#">
+                      <span>Park</span>
+                    </a>
+                  </div>
+                </header>
+                <div class="more-info">
+                  <i class="fa-solid fa-ellipsis"></i>
+                </div>
+              </div>
+              <div class="photo">
+                <div class="main-photo">
+                  <ul>
+                    <li>
+                      <img src="./img/sushi.jpg" alt="">
+                    </li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+                </div>
+                <div class="article-func">
+                  <div class="logo-area">
+                    <div class="heart">
+                      <i class="fa-regular fa-heart fa-xl"></i>
+                    </div>
+                    <div class="comment-logo">
+                      <i class="fa-regular fa-comment fa-xl"></i>
+                    </div>
+                    <div class="airplane">
+                      <i class="fa-solid fa-paper-plane fa-xl"></i>
+                    </div>
+                  </div>
+                  <div class="save-area">
+                    <div class="savelogo">
+                      <i class="fa-regular fa-bookmark fa-xl"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="comment">
+                <div class="like">
+                  <span>좋아요 460개</span>
+                </div>
+                <div class="comment-main-text">
+                  <span>user</span>
+                  <span class="text more-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam nisi laudantium tempora, itaque vel repellendus optio nemo. Cupiditate dignissimos nulla voluptatibus eaque, velit neque. Sequi quam accusantium quos vero
+                    ullam.</span>
+                </div>
+              </div>
+                <div class="before-day">
+                  <span>2일전</span>
+                </div>
+              <div class="reple-area">
+                <div class="imoji">
+                  <i class="fa-regular fa-face-smile fa-xl"></i>
+                </div>
+                <textarea aria-label="댓글 달기..." data-testid="post-comment-text-area" placeholder="댓글 달기..." class="comment-input" autocomplete="off" autocorrect="off" style="height: 18px !important;"></textarea>
+                <button class="push-btn" disabled type="submit">게시</button>
+              </div>
+            </article>
+          </div>
+        </div>
+        </div>
+        </div>
+        <div class="right">
+          <div class="myprofile">
+            <div class="profile-logo">
+              <img src="./img/porfile.jpg" alt="" style="width: 56px; height: 56px;">
+            </div>
+            <div class="article-user">
+              <a href="#">
+                <span>psh827</span>
+              </a>
+              <p>박상훈</p>
+            </div>
+            <div class="click">
+              <span>전환</span>
+            </div>
+          </div>
+          <div class="osusume">
+            <div class="foryou">
+              <span>회원님을 위한 추천</span>
+              <a href="#"><span class="all">모두 보기</span></a>
+            </div>
+            <ul>
+              <li>
+                <div class="osusume-photo">
+                  <img src="./img/porfile.jpg" alt="" style="width: 32px; height: 32px;">
+                </div>
+                <div class="osusume-user">
+                  <a href="#">
+                    <span>psh827</span>
+                  </a>
+                  <p>blablablabla</p>
+                </div>
+                <div class="follow">
+                  <span>팔로우</span>
+                </div>
+              </li>
+              <li>
+                <div class="osusume-photo">
+                  <img src="./img/porfile.jpg" alt="" style="width: 32px; height: 32px;">
+                </div>
+                <div class="osusume-user">
+                  <a href="#">
+                    <span>psh827</span>
+                  </a>
+                  <p>blablablabla</p>
+                </div>
+                <div class="follow">
+                  <span>팔로우</span>
+                </div>
+              </li>
+              <li>
+                <div class="osusume-photo">
+                  <img src="./img/porfile.jpg" alt="" style="width: 32px; height: 32px;">
+                </div>
+                <div class="osusume-user">
+                  <a href="#">
+                    <span>psh827</span>
+                  </a>
+                  <p>blablablabla</p>
+                </div>
+                <div class="follow">
+                  <span>팔로우</span>
+                </div>
+              </li>
+              <li>
+                <div class="osusume-photo">
+                  <img src="./img/porfile.jpg" alt="" style="width: 32px; height: 32px;">
+                </div>
+                <div class="osusume-user">
+                  <a href="#">
+                    <span>psh827</span>
+                  </a>
+                  <p>blablablabla</p>
+                </div>
+                <div class="follow">
+                  <span>팔로우</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+    <nav>
+      <div class="nav-wrap">
+        <div class="nav-logo">
+          <div class="logo-section">
+            <a href="#">
+              <img src="./img/mainpage_logo.png" alt="">
+            </a>
+          </div>
+        </div>
+        <div class="nav-search">
+          <div class="input-area">
+            <input type="text">
+            <div class="search-in-input">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <span>검색</span>
+            </div>
+          </div>
+        </div>
+        <div class="logo-group">
+          <div class="logo home">
+            <a href="#">
+              <i class="fa-solid fa-house fa-xl"></i>
+            </a>
+          </div>
+          <div class="logo msg">
+            <a href="#">
+              <i class="fa-solid fa-paper-plane fa-xl"></i>
+            </a>
+          </div>
+          <div class="logo heart">
+            <a href="#">
+              <i class="fa-regular fa-heart fa-xl"></i>
+              <!--채운하트클래스 fa-solid-->
+            </a>
+          </div>
+          <div class="logo porfile">
+            <a href="#">
+              <img src="./img/porfile.jpg" alt="" style="width: 24px; height: 24px;">
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </section>
+  <script src="https://kit.fontawesome.com/62a067f302.js" crossorigin="anonymous"></script>
+</body>
+
 </html>

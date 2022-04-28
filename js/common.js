@@ -15,7 +15,8 @@ $(function(){
     //id, pw 설정
         let id = '';
         let pw = '';
-        $('.login-area label input').on("propertychange change keyup paste input", pw, id,function(){
+        let btnLogin = $('button.login-button');
+        $('.login-area label input').on("propertychange change keyup paste input",function(){
         if($(this).val() != ''){
             $(this).prev().addClass('inside');
             $(this).addClass('on');
@@ -29,12 +30,12 @@ $(function(){
             $(this).next().find('button').addClass('hide');
         }
         if($('.id .input-box').val() != '' && $('.pw .input-box').val().length >= 8){
-            $('button.login-button').addClass('on');
-            $('button.login-button').prop('disabled', false);
+            btnLogin.addClass('on');
+            btnLogin.prop('disabled', false);
         }
         else{
-            $('button.login-button').prop('disabled', true);
-            $('button.login-button').removeClass('on');
+            btnLogin.prop('disabled', true);
+            btnLogin.removeClass('on');
         }
     })
     //로그인버튼
@@ -46,11 +47,11 @@ $(function(){
         else {
             $(this).text('비밀번호표시');
             $(this).parent().prev().attr('type', 'password');
-        }   
+        }
     })
     //로그인 기능
-    let userdata = {testid: 'korea123', testid2: 'korea456'};
     //임시 배열로 데이터 생성
+    let userdata = {testid: 'korea123', testid2: 'korea456'};
     $('.login-button').click(function(){
         id = $('.id-check').val();
         pw = $('.invisible').val();
@@ -63,7 +64,5 @@ $(function(){
                     alert('아이디와 비밀번호를 확인하세요.')
                 }
             }
-        
     });
-
 });
