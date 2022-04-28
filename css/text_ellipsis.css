@@ -1,12 +1,13 @@
 @charset "UTF-8";
 .more-content > span {
-    display: none;
+  display: none;
 }
 
 .more-content a {
-    margin-left: 5px;
-    font-size: 14px;
-    color: rgba(0, 0, 0, 0.4);
+  margin-left: 5px;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.4);
+  cursor: pointer;
 }
 /* 
 .more-content a span {

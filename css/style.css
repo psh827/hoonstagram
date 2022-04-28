@@ -6,7 +6,7 @@
 }
 html,
 body {
-  height: 300%;
+  height: 100vh;
 }
 a {
   color: black;
@@ -19,4 +19,3 @@ ul {
 body {
   background-color: #fafafa;
 }
-
