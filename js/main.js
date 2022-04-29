@@ -34,12 +34,8 @@ $(function () {
     //두번째 세번째 댓글 좋아요오류(좋아요가 눌리지않는 오류)를 위한 예외 처리.
     if ($(this).hasClass("like") == true) {
       likecount = $(this)
-        .parent()
-        .parent()
-        .parent()
-        .parent()
+        .parents('.photo')
         .next()
-        .find(".like")
         .find("span")
         .text()
         .split(" ")[1]
@@ -48,10 +44,7 @@ $(function () {
 
     //span tag 지정 변수
     let spantext = $(this)
-      .parent()
-      .parent()
-      .parent()
-      .parent()
+      .parents('.photo')
       .next()
       .find(".like")
       .find("span");
@@ -75,4 +68,10 @@ $(function () {
     }
     return false;
   });
+  //북마크
+  $('.fa-bookmark').click(function(){
+    $(this).toggleClass('fa-solid');
+  })
+
+
 });
