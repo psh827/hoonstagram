@@ -21,6 +21,11 @@ nav {
   padding-top: 5px;
   width: 105px;
   height: 30px;
+  cursor: pointer;
+}
+
+.nav-log i, .logo-area i {
+  cursor: pointer;
 }
 
 .nav-search .input-area {

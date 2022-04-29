@@ -25,13 +25,14 @@ $(function () {
           '</span><span class="comment-logo"><i class="fa-regular fa-heart fa-sm"></i></span></p>'
       );
     $(this).prev().val("");
+    $(this).prop('disabled', true);
   });
   //좋아요 클릭시 빨간색으로 변경, 좋아요 숫자 변경
   $(document).on("click", ".fa-heart", function () {
     //좋아요 갯수 가져오기
     let likecount = "";
     //두번째 세번째 댓글 좋아요오류(좋아요가 눌리지않는 오류)를 위한 예외 처리.
-    if ($(this).hasClass("fa-sm") != true) {
+    if ($(this).hasClass("like") == true) {
       likecount = $(this)
         .parent()
         .parent()
@@ -44,6 +45,7 @@ $(function () {
         .split(" ")[1]
         .split("개")[0];
     }
+
     //span tag 지정 변수
     let spantext = $(this)
       .parent()
@@ -53,12 +55,17 @@ $(function () {
       .next()
       .find(".like")
       .find("span");
+
     //좋아요 갯수 숫자화
     likecount = Number(likecount);
 
     $(this).toggleClass("fa-solid");
     if ($(this).hasClass("fa-solid")) {
-      $(this).css("color", "red");
+      if ($(this).hasClass("nav-heart")){
+        $(this).css("color", "black");
+      }else{
+        $(this).css("color", "#ED4956");
+      }
       if ($(this).hasClass("fa-xl")) {
         spantext.text("좋아요 " + (likecount + 1) + "개");
       }
@@ -66,5 +73,6 @@ $(function () {
       $(this).css("color", "black");
       spantext.text("좋아요 " + (likecount - 1) + "개");
     }
+    return false;
   });
 });
