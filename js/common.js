@@ -29,6 +29,8 @@ $(function(){
             $(this).removeClass('on')
             $(this).next().find('button').addClass('hide');
         }
+
+
         if($('.id .input-box').val() != '' && $('.pw .input-box').val().length >= 8){
             btnLogin.addClass('on');
             btnLogin.prop('disabled', false);

@@ -63,6 +63,10 @@ nav {
   margin-right: 0;
 }
 
+.logo-group .heart{
+  position: relative;
+}
+
 main {
   width: 100%;
 }
@@ -330,6 +334,44 @@ main section {
 }
 
 .osusume ul li {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.push-heart-area{
+  position:absolute;
+  top: 40px;
+  left: -430px;
+}
+
+
+.main-area {
+  background: #fff;
+  background: rgba(var(--d87,255,255,255),1);
+  border-radius: 6px;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
+  width: 100%;
+}
+
+.inside-main{
+  max-height: 362px;
+  min-height: 100px;
+  overflow-y: auto;
+  width: 500px;
+}
+
+/* .inside-main .out-bar { 
+  height: 362px; */
+  overflow: hidden auto; 
+}  */
+
+.inside-main-article{
   width: 100%;
   display: flex;
   justify-content: space-between;

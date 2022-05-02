@@ -1,16 +1,19 @@
 $(function () {
   let myid = $(".myprofile .article-user span").text();
   //textarea에 변화가 생기면 게시버튼이 활성화 되는 버튼
-  $(".reple-area textarea").on(
-    "propertychange change keyup paste input",
-    function () {
-      if ($(this).val() != "") {
-        $(this).next().prop("disabled", false);
-      } else {
-        $(this).next().prop("disabled", true);
-      }
-    }
-  );
+  onPushBtn(".reple-area textarea", "disabled")
+
+
+  // $(".reple-area textarea").on(
+  //   "propertychange change keyup paste input",
+  //   function () {
+  //     if ($(this).val() != "") {
+  //       $(this).next().prop("disabled", false);
+  //     } else {
+  //       $(this).next().prop("disabled", true);
+  //     }
+  //   }
+  // );
   //게시버튼 클릭시 댓글 추가기능
   $("button.push-btn").click(function () {
     $(this)
@@ -72,6 +75,4 @@ $(function () {
   $('.fa-bookmark').click(function(){
     $(this).toggleClass('fa-solid');
   })
-
-
 });
