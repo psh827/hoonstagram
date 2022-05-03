@@ -162,9 +162,69 @@ main section {
   padding-right: 20px;
 }
 
-.photo .main-photo img {
+.photo .main-photo {
   width: 100%;
+  position: relative;
 }
+
+.photo .main-photo ul {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  /* overflow-x: auto;
+  overflow-y: hidden; */
+  width: 614px;
+}
+
+.photo .main-photo ul li {
+  float: left;
+  width: 614px;
+}
+
+.photo .main-photo ul li img {
+  width: 614px;
+}
+
+.next-btn{
+  background: 0 0;
+  border: 0;
+  justify-self: center;
+  outline: 0;
+  padding: 16px 8px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.next-btn .next {
+  background-image: url(../img/bunddle.png);
+  background-position: -162px -98px;
+  height: 30px;
+  width: 30px;
+}
+
+.prev-btn{
+  background: 0 0;
+  border: 0;
+  justify-self: center;
+  outline: 0;
+  padding: 16px 8px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.prev-btn .prev {
+  background-image: url(../img/bunddle.png);
+  background-position: -130px -98px;
+  height: 30px;
+  width: 30px;
+}
+
 .article-func {
   padding: 20px;
   display: flex;
@@ -343,13 +403,16 @@ main section {
 
 .push-heart-area{
   position:absolute;
-  top: 40px;
+  top: 35px;
   left: -430px;
+  display: none;
 }
 
+.push-heart-area.on{
+  display: block;
+}
 
 .main-area {
-  background: #fff;
   background: rgba(var(--d87,255,255,255),1);
   border-radius: 6px;
   height: 100%;
@@ -359,6 +422,22 @@ main section {
   width: 100%;
 }
 
+
+.right-top-point{
+  background: rgba(var(--d87,255,255,255),1);
+  border: 1px solid #fff;
+  border: 1px solid rgba(var(--f23,255,255,255),1);
+  bottom: -6px;
+  box-shadow: 0 0 5px 1px rgb(0 0 0 / 10%);
+  box-shadow: 0 0 5px 1px rgba(var(--jb7,0,0,0),.0975);
+  height: 14px;
+  position: absolute;
+  top: -8px;
+  right: 50px;
+  transform: rotate(45deg);
+  width: 14px;
+}
+
 .inside-main{
   max-height: 362px;
   min-height: 100px;
@@ -366,18 +445,39 @@ main section {
   width: 500px;
 }
 
-/* .inside-main .out-bar { 
-  height: 362px; */
-  overflow: hidden auto; 
-}  */
+.inside-main .osusume-photo img {
+  width: 44px;
+  height: 44px;
+}
+.inside-main .out-bar {
+  height: 362px;
+  padding-left: 10px;
+  overflow: hidden auto;
+}
+
+.this-month {
+  padding-left: 5px;
+  margin: 7px 0 7px;
+}
+.this-month .this-month-text {
+  font-size: 12px;
+  font-weight: bold;
+  padding-top: 10px;
+}
 
 .inside-main-article{
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  margin: 10px 0 40px;
 }
+.first-article {
+  display: flex;
+  border-bottom: 1px solid var(--main-color);
+  padding: 0px 5px 5px 0;
+}
+
 
 .osusume-photo {
   margin-right: 15px;

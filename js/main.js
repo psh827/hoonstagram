@@ -75,4 +75,11 @@ $(function () {
   $('.fa-bookmark').click(function(){
     $(this).toggleClass('fa-solid');
   })
+
+
+  //하트
+  $('.nav-heart').click(function(){
+    $('.push-heart-area').toggleClass('on')
+  })
+
 });
