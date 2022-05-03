@@ -236,3 +236,8 @@ button.on {
 .left-side .image .inner-image.show {
   opacity: 1;
 }
+
+footer{
+  text-align: center;
+  margin: -100px;
+}
