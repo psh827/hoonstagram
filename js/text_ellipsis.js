@@ -9,7 +9,6 @@ $(function () {
   // }
 
   elem.each(function (i) {
-    console.log(i);
     let content = $(this).html();
     let contentLeng = content.length;
     let lessText = content.substr(0, showText);
@@ -19,19 +18,10 @@ $(function () {
       changeHtml = `${lessText} <span>...</span><span class="more-content"><span>${moreText}</span><a class="more-btn active"><span>${moreBtnText}</span></a></span>`;
       $(this).html(changeHtml);
       if (i == 0) {
-        console.log(i);
-        console.log($(this));
-        console.log($(this).attr("class"));
         $(this).html(changeHtml);
       } else if (i == 1) {
-        console.log(i);
-        console.log($(this));
-        console.log($(this).attr("class"));
         $(this).html(changeHtml);
       } else {
-        console.log(i);
-        console.log($(this));
-        console.log($(this).attr("class"));
         $(this).html(changeHtml);
       }
     }

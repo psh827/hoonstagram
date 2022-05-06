@@ -24,7 +24,8 @@ nav {
   cursor: pointer;
 }
 
-.nav-log i, .logo-area i {
+.nav-log i,
+.logo-area i {
   cursor: pointer;
 }
 
@@ -63,7 +64,7 @@ nav {
   margin-right: 0;
 }
 
-.logo-group .heart{
+.logo-group .heart {
   position: relative;
 }
 
@@ -162,6 +163,11 @@ main section {
   padding-right: 20px;
 }
 
+.photo {
+  /* width: 614px; */
+  overflow-x: hidden;
+}
+
 .photo .main-photo {
   width: 100%;
   position: relative;
@@ -170,42 +176,42 @@ main section {
 .photo .main-photo ul {
   display: flex;
   flex-wrap: nowrap;
-  overflow: hidden;
-  /* overflow-x: auto;
-  overflow-y: hidden; */
   width: 614px;
+  height: 100%;
 }
 
 .photo .main-photo ul li {
   float: left;
   width: 614px;
+  height: 812px;
 }
 
 .photo .main-photo ul li img {
   width: 614px;
+  height: 100%;
 }
 
-.next-btn{
+.next-btn {
   background: 0 0;
   border: 0;
   justify-self: center;
   outline: 0;
   padding: 16px 8px;
-  position: absolute;
-  top: 50%;
-  right: 0;
+  /* position: absolute; */
+  /* top: 50%; */
+  /* right: 0; */
   transform: translateY(-50%);
   cursor: pointer;
 }
 
-.next-btn .next {
+.next-btn .nextimg {
   background-image: url(../img/bunddle.png);
   background-position: -162px -98px;
   height: 30px;
   width: 30px;
 }
 
-.prev-btn{
+.prev-btn {
   background: 0 0;
   border: 0;
   justify-self: center;
@@ -245,16 +251,25 @@ main section {
 
 .photo-circle {
   position: absolute;
-  top: calc(50% - 12px);
-  left: calc(50% - 10px)
+  top: calc(50% - 20px);
+  left: calc(50% - 10px);
 }
 
 .photo-circle .circle {
   display: inline-block;
-  width: 5px;
-  height: 5px;
+  margin-right: 3px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
-  background-color: tomato;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.photo-circle .circle:last-child {
+  margin-right: 0;
+}
+
+.photo-circle .circle.active {
+  background-color: #0095f6;
 }
 
 .comment {
@@ -416,19 +431,19 @@ main section {
   margin-bottom: 20px;
 }
 
-.push-heart-area{
-  position:absolute;
+.push-heart-area {
+  position: absolute;
   top: 35px;
   left: -430px;
   display: none;
 }
 
-.push-heart-area.on{
+.push-heart-area.on {
   display: block;
 }
 
 .main-area {
-  background: rgba(var(--d87,255,255,255),1);
+  background: rgba(var(--d87, 255, 255, 255), 1);
   border-radius: 6px;
   height: 100%;
   overflow-x: hidden;
@@ -437,14 +452,13 @@ main section {
   width: 100%;
 }
 
-
-.right-top-point{
-  background: rgba(var(--d87,255,255,255),1);
+.right-top-point {
+  background: rgba(var(--d87, 255, 255, 255), 1);
   border: 1px solid #fff;
-  border: 1px solid rgba(var(--f23,255,255,255),1);
+  border: 1px solid rgba(var(--f23, 255, 255, 255), 1);
   bottom: -6px;
   box-shadow: 0 0 5px 1px rgb(0 0 0 / 10%);
-  box-shadow: 0 0 5px 1px rgba(var(--jb7,0,0,0),.0975);
+  box-shadow: 0 0 5px 1px rgba(var(--jb7, 0, 0, 0), 0.0975);
   height: 14px;
   position: absolute;
   top: -8px;
@@ -453,7 +467,7 @@ main section {
   width: 14px;
 }
 
-.inside-main{
+.inside-main {
   max-height: 362px;
   min-height: 100px;
   overflow-y: auto;
@@ -480,7 +494,7 @@ main section {
   padding-top: 10px;
 }
 
-.inside-main-article{
+.inside-main-article {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -492,7 +506,6 @@ main section {
   border-bottom: 1px solid var(--main-color);
   padding: 0px 5px 5px 0;
 }
-
 
 .osusume-photo {
   margin-right: 15px;
