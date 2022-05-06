@@ -82,4 +82,10 @@ $(function () {
     $('.push-heart-area').toggleClass('on')
   })
 
+
+  //이미지 슬라이드
+  $(".next").click(function(){
+    
+  })
+
 });

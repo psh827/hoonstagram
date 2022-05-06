@@ -229,6 +229,7 @@ main section {
   padding: 20px;
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 
 .article-func .logo-area {
@@ -240,6 +241,20 @@ main section {
 
 .logo-area div:last-child {
   margin-right: 0;
+}
+
+.photo-circle {
+  position: absolute;
+  top: calc(50% - 12px);
+  left: calc(50% - 10px)
+}
+
+.photo-circle .circle {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: tomato;
 }
 
 .comment {
