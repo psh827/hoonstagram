@@ -77,8 +77,8 @@ $(function () {
   });
 
   $(".main-photo").each(function () {
-    let circleLeng = $("ul li", this).length;
-    let circleplace = $(this).next().find(".photo-circle");
+    let circleLeng = $("ul li.slide-photo", this).length;
+    let circleplace = $(this).nextAll().find(".photo-circle");
     if (circleLeng > 1) {
       for (let i = 0; i < circleLeng; i++) {
         if (i == 0) {
@@ -91,60 +91,59 @@ $(function () {
   });
 
   const widthNum = 614;
-  const caInner = $(".main-photo");
   $(".btn").each(function () {
     actionBtn($(this));
   });
+
+  let circleIndex = 0;
+
   function actionBtn(el) {
     el.click(function () {
-      let caInMarginLeft = parseInt($(".main-photo").css("margin-left"));
+      const caInner = $(this).prevAll(".main-photo");
+      let circleArr = $(this).nextAll().find(".circle").get();
+      let liLeng = $(this).prevAll().find(".slide-photo").length;
+      let caInMarginLeft = parseInt(
+        $(this).prevAll(".main-photo").css("margin-left")
+      );
       let isAni = $(".main-photo").is(":animated");
-      if (el.attr("id") == "carousel-prev") {
+      if (el.hasClass("prev")) {
         if (!isAni) {
-          caInner.animate(
-            { marginLeft: caInMarginLeft + widthNum },
-            function () {
-              $("ul.column li:last", caInner).prependTo(
-                ".main-photo ul.column"
-              );
-              caInner.css("margin-left", -widthNum);
-              // initialFunc("prev");
-            }
-          );
+          if (caInMarginLeft < 0) {
+            caInner.animate(
+              { marginLeft: caInMarginLeft + widthNum },
+              function () {
+                $(circleArr[circleIndex]).removeClass("active");
+                $(circleArr[circleIndex - 1]).addClass("active");
+                circleIndex--;
+              }
+            );
+          }
+          if (caInMarginLeft >= -614) {
+            $(this).addClass("display");
+          } else if (caInMarginLeft >= -(widthNum * (liLeng - 1))) {
+            $(this).next().removeClass("display");
+          }
         }
-      } else {
+      } else if (el.hasClass("next")) {
         if (!isAni) {
-          caInner.animate(
-            { marginLeft: caInMarginLeft - widthNum },
-            function () {
-              $("ul.column li:first", caInner).appendTo(
-                ".main-photo ul.column"
-              );
-              // caInner.css("margin-left", -widthNum);
-              // initialFunc("next");
+          if (caInMarginLeft !== -(widthNum * (liLeng - 1))) {
+            caInner.animate(
+              { marginLeft: caInMarginLeft - widthNum },
+              function () {
+                $(circleArr[circleIndex]).removeClass("active");
+                $(circleArr[circleIndex + 1]).addClass("active");
+                circleIndex++;
+                console.log(circleIndex);
+              }
+            );
+            if (caInMarginLeft == -(widthNum * (liLeng - 2))) {
+              $(this).addClass("display");
+            } else if (caInMarginLeft <= 0) {
+              $(this).prevAll(".prev-btn").removeClass("display");
             }
-          );
+          }
         }
       }
     });
-  }
-
-  //이미지 슬라이드
-  // $("button.next-btn").click(function () {
-  //   let photowidth = $(".photo .main-photo ul li").width();
-  //   console.log(photowidth);
-  //   let maincontent = $(this).prev().find(".slide-photo");
-  //   console.log(maincontent);
-  //   let photoLeng = maincontent.length;
-  //   let maxwidth = photowidth * photoLeng;
-  //   console.log(-maxwidth);
-  //   let thiswidth = parseInt(maincontent.css("margin-left"));
-  //   console.log(thiswidth);
-  //   if (thiswidth >= -maxwidth) {
-  //     maincontent.animate(
-  //       { marginLeft: thiswidth - photowidth },
-  //       function () {}
-  //     );
-  //   }
-  // });
+  } // actionBtn
 });

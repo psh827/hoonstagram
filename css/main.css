@@ -166,6 +166,7 @@ main section {
 .photo {
   /* width: 614px; */
   overflow-x: hidden;
+  position: relative;
 }
 
 .photo .main-photo {
@@ -197,11 +198,15 @@ main section {
   justify-self: center;
   outline: 0;
   padding: 16px 8px;
-  /* position: absolute; */
-  /* top: 50%; */
-  /* right: 0; */
+  position: absolute;
+  top: 50%;
+  right: 0;
   transform: translateY(-50%);
   cursor: pointer;
+}
+
+.next-btn.display {
+  display: none;
 }
 
 .next-btn .nextimg {
@@ -223,8 +228,10 @@ main section {
   transform: translateY(-50%);
   cursor: pointer;
 }
-
-.prev-btn .prev {
+.prev-btn.display {
+  display: none;
+}
+.prev-btn .previmg {
   background-image: url(../img/bunddle.png);
   background-position: -130px -98px;
   height: 30px;
