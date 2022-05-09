@@ -110,6 +110,8 @@ main .main-section {
   border: 1px solid var(--main-color);
   overflow: hidden;
   position: relative;
+  background-color: #fff;
+
 }
 .story {
   background-color: #fff;

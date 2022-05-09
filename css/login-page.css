@@ -1,5 +1,6 @@
 main {
   width: 100%;
+  margin: 0 auto;
 }
 
 .login-article {
@@ -239,5 +240,5 @@ button.on {
 
 footer{
   text-align: center;
-  margin: -100px;
+  margin: -300px;
 }

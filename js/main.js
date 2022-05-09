@@ -13,12 +13,11 @@ $(function () {
     }) ;
   }
   
-
+  //아이콘들 호버 기능 css로 하니 클릭 해제 후 호버가 안됐음
   $(".article-func i").on({
     mouseover: function () {
       $(this).addClass("hover");
       if ($(this).hasClass("active")) {
-        // console.log("hello");
         $(this).removeClass("hover");
       }
     },
@@ -43,6 +42,7 @@ $(function () {
     $(this).prev().val("");
     $(this).prop("disabled", true);
   });
+
   //좋아요 클릭시 빨간색으로 변경, 좋아요 숫자 변경
   $(document).on("click", ".fa-heart", function () {
     //좋아요 갯수 가져오기
@@ -97,7 +97,7 @@ $(function () {
   //하트
   toggleFunk($(".nav-heart"), $(".push-heart-area"), "on");
 
-
+  //사진갯수에 맞춰 동그라미 생성
   $(".main-photo").each(function () {
     let circleLeng = $("ul li.slide-photo", this).length;
     let circleplace = $(this).nextAll().find(".photo-circle");
@@ -114,10 +114,9 @@ $(function () {
 
   storyBtn($(".strbtn"));
   //story slide
+  const liwidth = $(".story ul li").width() * $(".story ul li.story-slide").length;
   const ulwidth = $(".story ul").width();
-  console.log(ulwidth);
   const storywidth = $(".story ul li").width() * 4;
-  console.log(storywidth);
   function storyBtn(el) {
     el.click(function () {
       const caInner = $(".story");
@@ -143,14 +142,15 @@ $(function () {
       }
     });
   }
+  
 
+  //slide photo
   $(".btn").each(function () {
     console.log($(this));
     actionBtn($(this));
   });
 
   let circleIndex = 0;
-  //slide photo
   function actionBtn(el) {
     el.click(function () {
       const widthNum = 614;
@@ -200,7 +200,7 @@ $(function () {
         }
       }
     });
-  } // actionBtn
+  }
 
   //right부분 위치 실시간 변경
   $(window).resize(function () {
