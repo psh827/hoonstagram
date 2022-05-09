@@ -3,21 +3,22 @@ $(function () {
   //textarea에 변화가 생기면 게시버튼이 활성화 되는 버튼
   onPushBtn(".reple-area textarea", "disabled");
 
-  // $(".reple-area textarea").on(
-  //   "propertychange change keyup paste input",
-  //   function () {
-  //     if ($(this).val() != "") {
-  //       $(this).next().prop("disabled", false);
-  //     } else {
-  //       $(this).next().prop("disabled", true);
-  //     }
-  //   }
-  // );
+  function onPushBtn(elem, property){
+    $(elem).on("propertychange change keyup paste input", function(){
+      if ($(this).val() != "") {
+        $(this).next().prop(property, false);
+      } else {
+        $(this).next().prop(property, true);
+      }
+    }) ;
+  }
+  
 
-  $(".logo-area i").on({
+  $(".article-func i").on({
     mouseover: function () {
       $(this).addClass("hover");
       if ($(this).hasClass("active")) {
+        // console.log("hello");
         $(this).removeClass("hover");
       }
     },
@@ -85,21 +86,17 @@ $(function () {
   //toggleFucntion
   function toggleFunk(el, where, what) {
     el.click(function () {
-      $(this).toggleClass(what);
+      where.toggleClass(what);
     });
   }
 
   //북마크
-  toggleFunk($(".fa-bookmark"), $(this), "fa-solid");
-  // $(".fa-bookmark").click(function () {
-  //   $(this).toggleClass("fa-solid");
-  // });
+  toggleFunk($(".fa-bookmark"), $(".fa-bookmark"), "fa-solid active");
+
 
   //하트
   toggleFunk($(".nav-heart"), $(".push-heart-area"), "on");
-  // $(".nav-heart").click(function () {
-  //   $(".push-heart-area").toggleClass("on");
-  // });
+
 
   $(".main-photo").each(function () {
     let circleLeng = $("ul li.slide-photo", this).length;
