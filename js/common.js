@@ -30,7 +30,6 @@ $(function(){
             $(this).next().find('button').addClass('hide');
         }
 
-
         if($('.id .input-box').val() != '' && $('.pw .input-box').val().length >= 8){
             btnLogin.addClass('on');
             btnLogin.prop('disabled', false);
@@ -40,7 +39,7 @@ $(function(){
             btnLogin.removeClass('on');
         }
     })
-    //로그인버튼
+    //비밀번호 표시, 숨기기버튼
     $('.funcText button').click(function(){
         if($(this).text() == '비밀번호표시'){
             $(this).text('숨기기');
